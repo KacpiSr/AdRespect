@@ -1,0 +1,255 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+nav{
+    z-index: 9999999;
+    font-family: $inter;
+    font-size: 14px;
+}
+body.navbar-items-active {
+  overflow: hidden; /* Wyłącza przewijanie */
+}
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // min-height: 100vh;
+}
+.container {
+  max-width: 1292px;
+  width: 100%;
+  // padding: 0;
+  // padding: 0 30px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+  color: $black;
+  // padding: 10px;
+  height: 72px;
+  padding: 0;
+}
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: $black;
+}
+.navbar-items {
+  display: flex;
+  align-items: center;
+}
+.navbar-item {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: $black;
+}
+.navbar-search {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.search-bar {
+  width: 0;
+  height: 30px;
+  border: none;
+  background-color: $white;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.search-bar.active {
+  width: 150px;
+  // padding: 5px;
+  padding-left: 5px;
+  margin-right: 10px;
+}
+
+.search-icon {
+  cursor: pointer;
+  padding-right: 0 !important;
+}
+
+//   navbar-dropdown
+
+.navbar-dropdown {
+  display: none;
+  position: absolute;
+  background-color: $white;
+  list-style: none;
+  padding: 10px;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  z-index: 99999999;
+  // min-width: 100vh;
+}
+
+.offer-container.active .navbar-dropdown {
+  display: block;
+}
+.dropdown-item {
+  padding: 5px;
+  cursor: pointer;
+  color: $black;
+  cursor: pointer;
+}
+.dropdown-item:hover {
+  background-color: $green;
+}
+.offer-label {
+  cursor: pointer;
+  display: flex;
+}
+.navbar-arrow {
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+.offer-container.active .navbar-arrow {
+  transform: rotate(360deg);
+}
+.offer-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+// Media
+@media (max-width: 762px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar-burger {
+    display: block;
+    cursor: pointer;
+    font-size: 20px;
+    color: $black;
+  }
+
+  .navbar-items {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $black;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .navbar-items.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $black;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: translateY(0);
+    height: 100vh;
+  }
+
+  .navbar-items.active .offer-container.active ~ * {
+    transform: translateY(180px);
+  }
+
+  .navbar-item {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: $black;
+    width: 100%;
+  }
+
+  .navbar-search {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 763px) {
+  .navbar-burger {
+    display: none;
+  }
+
+  .navbar-items {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-item {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: $black;
+  }
+
+  .navbar-search {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+}
+
+#menu {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+  transform: translate(-50%, -50%);
+  height: 20px;
+  width: 20px;
+}
+
+#menu:hover {
+  cursor: pointer;
+}
+
+#menu span {
+  background: $black;
+  transform: translateY(-50%) rotate(0deg);
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  transition: top 0.1s ease 0.3s, transform 0.3s ease, background 0.1s ease 0.3s;
+}
+
+#menu.clicked span {
+  transition: top 0.1s ease, transform 0.3s ease 0.1s, background 0.1s ease;
+}
+
+#menu span:nth-child(1) {
+  top: 10%;
+}
+
+#menu span:nth-child(2) {
+  top: 50%;
+}
+
+#menu span:nth-child(3) {
+  top: 90%;
+}
+
+#menu.clicked span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(315deg);
+}
+
+#menu.clicked span:nth-child(2) {
+  transform: translateY(-50%) rotate(405deg);
+}
+
+#menu.clicked span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%) rotate(405deg);
+}

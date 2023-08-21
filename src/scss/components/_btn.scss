@@ -1,0 +1,86 @@
+// .btn {
+//     padding: 12px 24px;
+//     border-radius: 200px;
+//     font-weight: 400;
+//     text-decoration: none;
+//     &--green {
+//         color: $green
+//     }
+//     &:after {
+//         position: absolute;
+//         content:"";
+//         z-index: -1;
+//         height: 100%;
+//         left: 0;
+//         top: 0;
+//         width: 0;
+//         background-color: $green;
+//         transition: all 0.3s;
+//     }
+//     &:hover{
+//         color:white;
+//         &:after{
+//             width: 100%;
+//         }
+//     }
+//     @media(max-width:767px){
+//         padding:10px 20px;
+//     }
+// }
+
+.swiper-header {
+  z-index: 3;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .arrow-buttons {
+    background: $white;
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    bottom: 0;
+    height: 96px;
+    width: 192px;
+    .swiper-button-prev {
+      position: relative;
+      top: 0;
+      margin-top: 0;
+      height: 96px;
+      width: 120px;
+      transition-duration: 0.1s;
+      &:hover {
+        left: 5px;
+        transition-duration: 0.2s;
+      }
+    }
+    .swiper-button-next {
+      position: relative;
+      top: 0;
+      margin-top: 0;
+      height: 96px;
+      width: 120px;
+      right: 10px;
+      left: auto;
+      transition-duration: 0.1s;
+      &:hover {
+        right: 5px;
+        transition-duration: 0.2s;
+      }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      &::after {
+        display: none;
+      }
+    }
+    .button-content-prev,
+    .button-content-next {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

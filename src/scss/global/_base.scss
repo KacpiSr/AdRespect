@@ -1,0 +1,43 @@
+html,
+body {
+    font-family: $font-main;
+    overflow-x: hidden;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    color: $gray;
+    background-color: white;
+    @media (max-width: $md) {
+        font-size: 14px;
+    }
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+img,
+.wp-block-image img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+    transition-duration: 0.2s;
+    color: inherit;
+    &:visited,
+    &:hover {
+        text-decoration: none;
+        transition-duration: 0.2s;
+    }
+}
+*:focus {
+    outline: none;
+}
+strong {
+    font-weight: 600;
+}
+.bg {
+    &--white {
+        background: $white;
+    }
+}
