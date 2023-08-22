@@ -15,11 +15,6 @@
 
 <body <?php body_class(); ?>>
 
-    <!-- PRELOADER -->
-    <!-- <?php //get_template_part('template-parts/global/preloader'); 
-            ?> -->
-
-
     <header>
         <nav class="page-container">
             <div class="container">

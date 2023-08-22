@@ -1,0 +1,60 @@
+.insta-box {
+    padding: 60px 0;
+    background-color: $grey;
+    color: $grey;
+    .insta-contentbox {
+      @media (max-width: $xl) {
+        padding: 120px 30px;
+      }
+      @media (max-width: $md) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 30px;
+        gap: 30px;
+      }
+      @media (max-width: $sm) {
+        gap: 30px;
+      }
+      align-items: flex-end;
+      padding: 120px 110px;
+      display: flex;
+      background: $green;
+      justify-content: center;
+      align-content: center;
+      gap: 65px;
+      &__info {
+        line-height: 120%;
+        max-width: 600px;
+        @media (max-width: $xl) {
+          font-size: 30px;
+        }
+        @media (max-width: $sm) {
+          font-size: 25px;
+        }
+      }
+      &__linkbox {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        &--instabutton {
+          display: inline-block;
+          background-color: $grey;
+          color: $green;
+          padding: 12px 24px;
+          border-radius: 200px;
+          text-decoration: none;
+          border: 1px solid $grey;
+          transition-duration: 0.3s;
+          &:hover {
+            background-color: transparent;
+            color: $grey;
+            transition-duration: 0.3s;
+          }
+          @media (max-width: $sm){
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }

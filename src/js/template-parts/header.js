@@ -17,10 +17,19 @@ navbarBurger.addEventListener('click', () => {
   document.body.classList.toggle('navbar-items-active');
 });
 
-const navLinks = document.querySelectorAll('.navbar a');
-navLinks.forEach(link => {
+$(document).ready(function() {
+  const menuIcon = $('#menu');
+  const navLinks = document.querySelectorAll('.navbar a');
+  
+  menuIcon.on('click', function() {
+    $(this).toggleClass('clicked');
+  });
+  
+  navLinks.forEach(link => {
     link.addEventListener('click', function(event) {
-        navbarItems.classList.remove('active');
-        document.body.classList.remove('navbar-items-active');
+      menuIcon.removeClass('clicked');
+      $('.navbar-items').removeClass('active');
+      $('body').removeClass('navbar-items-active');
     });
+  });
 });

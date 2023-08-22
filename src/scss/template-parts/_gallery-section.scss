@@ -1,0 +1,94 @@
+.gallery-section {
+    position: relative;
+    background-color: $beige;
+    padding-top: 120px;
+    .gallery-hero {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 96px;
+      &__heading {
+        color: $green;
+      }
+    }
+  
+    .gallery {
+      padding-top: 96px;
+      margin: 0 auto;
+    }
+    .gallery-item {
+      width: 452px;
+      margin-bottom: 43px;
+      img {
+        width: 100%;
+        transition-duration: 0.3s;
+        cursor: pointer;
+        &:hover {
+          // width: calc(100% + 5px);
+          transform: scale(1.025);
+          transition-duration: 0.3s;
+        }
+      }
+    }
+  
+    #loadMoreButton {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 78px;
+      z-index: 999;
+      background-color: transparent;
+      border-radius: 200px;
+      color: $black;
+      border: 1px solid $black;
+      padding: 12px 22px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      @media (max-width: $md) {
+        bottom: 30px;
+      }
+  
+      svg {
+        transition-duration: 0.3s;
+        position: relative;
+        top: -1px;
+      }
+      path {
+        transition-duration: 0.3s;
+      }
+      &:hover {
+        border-color: $grey;
+        color: $grey;
+        svg {
+          top: 1px;
+          transition-duration: 0.3s;
+        }
+        path {
+          fill: $grey;
+          transition-duration: 0.3s;
+        }
+      }
+    }
+  
+    .btn-primary:focus {
+      box-shadow: none !important;
+    }
+  
+    .gallery-gradient {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1000px;
+      background: linear-gradient(to top, rgba(220, 193, 171, 1), transparent);
+      pointer-events: none;
+      z-index: 998;
+      @media (max-width: $lg) {
+        height: 600px;
+      }
+      @media (max-width: $sm) {
+        height: 400px;
+      }
+    }
+  }

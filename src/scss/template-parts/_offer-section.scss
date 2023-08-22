@@ -1,0 +1,94 @@
+.offers {
+    background-color: $grey;
+    padding: 120px 0 160px 0;
+    @media (max-width: $lg) {
+      padding-top: 50px;
+    }
+    &__header {
+      color: $green;
+    }
+    &__text-box {
+      padding: 0 0 95px 0;
+    }
+    &__under-header {
+      padding: 20px 0 30px 0;
+      // font-style: italic;
+      @media (max-width: $lg) {
+        font-size: 36px;
+        line-height: 120%;
+        span {
+          font-size: 36px;
+        }
+      }
+    }
+    .tiles {
+      justify-content: center;
+      flex-wrap: wrap;
+      display: flex;
+      gap: 60px;
+      // flex-wrap: wrap;
+      @media (max-width: $lg) {
+        flex-direction: column;
+        align-items: center;
+      }
+      .tiles-box {
+        min-width: fit-content;
+        top: 0;
+        transition-duration: 0.5s;
+        position: relative;
+        color: $black;
+        text-decoration: none;
+        border-radius: 28px;
+        padding: 48px 40px;
+        height: 370px;
+        max-width: 378px;
+        width: 100%;
+        background-color: $white;
+        &__content-box {
+          max-width: 300px;
+          margin-bottom: 60px;
+          &--header {
+            margin: 30px 0 10px 0;
+          }
+          &--heading {
+            line-height: 150%;
+          }
+        }
+        &__link {
+          color: $green;
+          text-decoration: none;
+          display: inline-block;
+          position: relative;
+  
+          &--arrow {
+            position: relative;
+            left: 5px;
+            transition-duration: 0.3s;
+          }
+          &::after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: -5px;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 0;
+            position: absolute;
+            background: $green;
+            transition: width 0.5s ease 0s, right 0.5s ease 0s;
+            width: 0;
+          }
+        }
+  
+        &:hover {
+          top: 10px;
+          .tiles-box__link::after {
+            left: 0;
+            width: calc(100% + 10px);
+          }
+          .tiles-box__link--arrow {
+            left: 10px;
+          }
+        }
+      }
+    }
+  }

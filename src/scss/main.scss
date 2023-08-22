@@ -1,8 +1,18 @@
-// @import "global/grid";
+//global
 @import "global/typography";
 @import "global/variables";
+
+//components
 @import "components/btn";
+
+//template-page
 @import "template-page/front-page";
 @import "template-layout/header";
 @import "template-layout/footer";
-// @import "global/base";
+
+//template-parts
+@import "template-parts/about-section";
+@import "template-parts/gallery-section";
+@import "template-parts/insta-section";
+@import "template-parts/offer-section";
+@import "template-parts/slider-section";
