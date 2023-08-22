@@ -11,21 +11,21 @@ $taxonomy - if you want to display taxonomy in bradcrumbs type slug
 true/false - to hide archive link (true for display)
 
 EXAMPLEs:
-funktional_breadcrumbs('Knowledge', '/knowledge/', 'blog_cat', false);
-funktional_breadcrumbs('Knowledge', '/knowledge/', 'blog_cat', true)
-funktional_breadcrumbs('Knowledge', '/knowledge/', '', false);
-funktional_breadcrumbs('Knowledge', '', 'blog_cat', true);
-funktional_breadcrumbs('Knowledge', '', '', true);
-funktional_breadcrumbs('','','', true);
-funktional_breadcrumbs('','','', false);
+kastarter_breadcrumbs('Knowledge', '/knowledge/', 'blog_cat', false);
+kastarter_breadcrumbs('Knowledge', '/knowledge/', 'blog_cat', true)
+kastarter_breadcrumbs('Knowledge', '/knowledge/', '', false);
+kastarter_breadcrumbs('Knowledge', '', 'blog_cat', true);
+kastarter_breadcrumbs('Knowledge', '', '', true);
+kastarter_breadcrumbs('','','', true);
+kastarter_breadcrumbs('','','', false);
 
 DEFAULT USE: 
-funktional_breadcrumbs('','','', true);
+kastarter_breadcrumbs('','','', true);
 */
 
 
 // Breadcrumbs
-function funktional_breadcrumbs($name, $link, $taxonomy, $show_archive) {
+function kastarter_breadcrumbs($name, $link, $taxonomy, $show_archive) {
        
     // Settings
     $separator = '»';

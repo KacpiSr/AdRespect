@@ -3,13 +3,13 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
 }
-nav{
-    z-index: 9999999;
-    font-family: $inter;
-    font-size: 14px;
+nav {
+  z-index: 9999999;
+  font-family: $inter;
+  font-size: 14px;
 }
 body.navbar-items-active {
-  overflow: hidden; /* Wyłącza przewijanie */
+  overflow: hidden;
 }
 .page-container {
   display: flex;
@@ -23,6 +23,7 @@ body.navbar-items-active {
   // padding: 0;
   // padding: 0 30px;
 }
+// ----------
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -45,8 +46,13 @@ body.navbar-items-active {
 }
 .navbar-item {
   padding: 10px 20px;
-  text-decoration: none;
+  text-decoration: none !important;
   color: $black;
+  transition-duration: 0.3s;
+  &:hover{
+    color: $green;
+    transition-duration: 0.3s;
+  }
 }
 .navbar-search {
   display: flex;
@@ -68,11 +74,21 @@ body.navbar-items-active {
   // padding: 5px;
   padding-left: 5px;
   margin-right: 10px;
+  border-bottom: 1px solid $beige;
+}
+
+input:focus-visible{
+  outline-width: 0;
 }
 
 .search-icon {
   cursor: pointer;
   padding-right: 0 !important;
+  // transition-duration: 0.3s;
+  // &:hover{
+  //   height: 26px;
+  //   transition-duration: 0.3s;
+  // }
 }
 
 //   navbar-dropdown
@@ -82,7 +98,7 @@ body.navbar-items-active {
   position: absolute;
   background-color: $white;
   list-style: none;
-  padding: 10px;
+  padding: 5px;
   z-index: 1;
   top: 100%;
   left: 0;
@@ -98,13 +114,21 @@ body.navbar-items-active {
   cursor: pointer;
   color: $black;
   cursor: pointer;
+  transition-duration: 0.3s;
 }
 .dropdown-item:hover {
-  background-color: $green;
+  color: $green;
+  transition-duration: 0.3s;
 }
 .offer-label {
   cursor: pointer;
   display: flex;
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  color: $green;
+  text-decoration: none;
+  background-color: transparent;
 }
 .navbar-arrow {
   cursor: pointer;
@@ -144,9 +168,11 @@ body.navbar-items-active {
     top: 60px;
     left: 0;
     width: 100%;
+    transition-duration: 0.3s;
     z-index: 1;
-  }
 
+  }
+  
   .navbar-items.active {
     display: flex;
     flex-direction: column;
@@ -164,6 +190,7 @@ body.navbar-items-active {
   .navbar-items.active .offer-container.active ~ * {
     transform: translateY(180px);
   }
+
 
   .navbar-item {
     padding: 10px 20px;
@@ -203,9 +230,9 @@ body.navbar-items-active {
 }
 
 #menu {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
   transform: translate(-50%, -50%);
   height: 20px;
   width: 20px;

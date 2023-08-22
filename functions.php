@@ -56,56 +56,42 @@ get_template_part('function-catalog/remove-comments');
 
 
 
-function add_custom_scripts() {
-    wp_enqueue_script('masonry-script', get_template_directory_uri() . '/src/js/template-parts/masonry.js', array('jquery'), null, true);
-    wp_localize_script('masonry-script', 'masonry_vars', array(
-        'ajaxurl' => admin_url('admin-ajax.php')
-    ));
-}
-add_action('wp_enqueue_scripts', 'add_custom_scripts');
 
-function load_more_images() {
-    $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+function my_custom_ajax_action() {
+    $page = intval($_GET['page']);
+    $per_page = intval($_GET['per_page']);
 
     $args = array(
         'post_type'      => 'attachment',
         'post_mime_type' => 'image',
         'post_status'    => 'inherit',
-        'posts_per_page' => 3,
+        'posts_per_page' => $per_page,
         'paged'          => $page,
     );
 
     $query = new WP_Query($args);
+    $images = array();
 
-    ob_start();
-
-    if ($query->have_posts()) {
-        $top_position = 0;
-        while ($query->have_posts()) {
-            $query->the_post();
-            $image_url = wp_get_attachment_url(get_the_ID());
-            ?>
-            <div class="gallery-item" style="position: absolute; left: 0; top: <?php echo $top_position; ?>px;">
-                <img src="<?php echo esc_url($image_url); ?>" alt="Image">
-            </div>
-            <?php
-            $top_position += 100;
-        }
-        wp_reset_postdata();
+    while ($query->have_posts()) {
+        $query->the_post();
+        $image_url = wp_get_attachment_url(get_the_ID());
+        array_push($images, $image_url);
     }
 
-    $new_images_html = ob_get_clean();
+    wp_reset_postdata();
 
-    if (!empty($new_images_html)) {
-        echo json_encode(array('success' => true, 'html' => $new_images_html));
-    } else {
-        echo json_encode(array('success' => false));
-    }
-
+    wp_send_json($images);
     wp_die();
 }
-add_action('wp_ajax_load_more_images', 'load_more_images');
-add_action('wp_ajax_nopriv_load_more_images', 'load_more_images');
+add_action('wp_ajax_my_custom_ajax_action', 'my_custom_ajax_action');
+add_action('wp_ajax_nopriv_my_custom_ajax_action', 'my_custom_ajax_action');
+
+
+function enqueue_custom_scripts() {
+    wp_enqueue_script('custom-script', get_template_directory_uri() . '/src/js/template-parts/macygallery.js', array('jquery'), '1.0', true);
+    wp_localize_script('custom-script', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 
 

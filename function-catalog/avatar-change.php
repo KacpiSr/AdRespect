@@ -1,6 +1,6 @@
 <?php 
 
-function funktional_admin_avatar($args, $id_or_email)
+function kastarter_admin_avatar($args, $id_or_email)
 {
     if ($id_or_email == 1) {
         $args['url'] = get_template_directory_uri() . '/dist/img/avatar.jpg';
@@ -10,6 +10,6 @@ function funktional_admin_avatar($args, $id_or_email)
     }
     return $args;
 }
-add_filter('get_avatar_data', 'funktional_admin_avatar', 100, 2);
+add_filter('get_avatar_data', 'kastarter_admin_avatar', 100, 2);
 
 ;?>

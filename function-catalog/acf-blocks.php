@@ -22,7 +22,7 @@ add_filter('block_categories', 'example_block_category', 10, 2);
 
 
 /* ADD BLOCK*/
-function funktional_acf_blocks_register()
+function kastarter_acf_blocks_register()
 {
     if (function_exists('acf_register_block_type')) {
 
@@ -42,5 +42,5 @@ function funktional_acf_blocks_register()
         // ));
     }
 }
-add_action('acf/init', 'funktional_acf_blocks_register');
+add_action('acf/init', 'kastarter_acf_blocks_register');
 /* END ADD BLOCK*/

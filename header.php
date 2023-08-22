@@ -5,8 +5,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+    <script>
+        let siteUrl = '<?php echo get_site_url();  ?>';
+    </script>
     <?php wp_head(); ?>
-
 </head>
 
 <body <?php body_class(); ?>>
@@ -25,31 +28,31 @@
                     </a>
                     <div class="navbar-items">
                         <div class="navbar-item offer-container">
-                            <div class="offer-label">Oferta
-                            <ul class="navbar-dropdown">
-                                <li class="dropdown-item">Wpis 1 Wpis 1 Wpis 1 Wpis 1</li>
-                                <li class="dropdown-item">Wpis 2</li>
-                                <li class="dropdown-item">Wpis 3</li>
-                                <li class="dropdown-item">Wpis 4</li>
-                                <li class="dropdown-item">Wpis 5</li>
-                            </ul>
-                            <div class="navbar-arrow"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/arrow.svg" width="" height="" alt="arrow" /></div>
+                            <div class="offer-label font-weight--fw500">Oferta
+                                <ul class="navbar-dropdown">
+                                    <li class="dropdown-item font-weight--fw500">Menu strony 1</li>
+                                    <li class="dropdown-item font-weight--fw500">Menu strony 2</li>
+                                    <li class="dropdown-item font-weight--fw500">Menu strony 3</li>
+                                    <li class="dropdown-item font-weight--fw500">Menu strony 4</li>
+                                    <li class="dropdown-item font-weight--fw500">Menu strony 5</li>
+                                </ul>
+                                <div class="navbar-arrow"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/arrow.svg" width="" height="" alt="arrow" /></div>
+                            </div>
+                        </div>
+                        <a href="#" class="navbar-item font-weight--fw500">O firmie</a>
+                        <a href="#" class="navbar-item font-weight--fw500">Realizacje</a>
+                        <a href="#" class="navbar-item font-weight--fw500">Kontakt</a>
+                        <div class="navbar-search">
+                            <input type="text" class="search-bar" placeholder="Szukaj...">
+                            <div class="navbar-item"><img class="search-icon" src="<?php echo get_template_directory_uri(); ?>/dist/img/search-icon.svg" width="" height="" alt="arrow" /></div>
                         </div>
                     </div>
-                    <a href="#" class="navbar-item">O firmie</a>
-                    <a href="#" class="navbar-item">Realizacje</a>
-                    <a href="#" class="navbar-item">Kontakt</a>
-                    <div class="navbar-search">
-                        <input type="text" class="search-bar" placeholder="Szukaj...">
-                        <div class="navbar-item search-icon"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/search-icon.svg" width="" height="" alt="arrow" /></div>
+                    <div id='menu' class="navbar-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
-                <div id='menu' class="navbar-burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
             </div>
         </nav>
     </header>
