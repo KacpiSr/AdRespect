@@ -10,23 +10,64 @@
     width: 100%;
     max-width: 688px;
     max-height: 737px;
+    @media (max-width: $xl) {
+      max-width: 588px;
+    }
+    @media (max-width: $lg) {
+      max-width: 380px;
+      height: 600px;
+    }
+    @media (max-width: $md) {
+      display: none;
+    }
   }
 
   .content {
+    @media (max-width: $xl) {
+      padding: 39px 0;
+    }
     padding: 148.5px 0;
     &__hero-text {
       max-width: 550px;
+      @media (max-width: $xl) {
+        max-width: 360px;
+        font-size: 55px;
+      }
+      @media (max-width: $lg) {
+        font-size: 48px;
+      }
+      @media (max-width: $md) {
+        max-width: 520px;
+        font-size: 36px;
+      }
     }
     &__hero-under {
       max-width: 440px;
       margin: 0;
       margin: 45px 0 70px 0;
+      @media (max-width: $xl) {
+        max-width: 370px;
+        margin: 45px 0 36px 0;
+      }
+      @media (max-width: $md) {
+        max-width: none;
+        margin: 45px 0 36px 0;
+      }
     }
     &__slider-hrefs {
+      @media (max-width: $xl) {
+        display: inline-block;
+      }
+      @media (max-width: $md) {
+        display: flex;
+      }
+      @media (max-width: $sm) {
+        flex-direction: column;
+      }
       display: flex;
       gap: 30px;
-      &--left,
-      &--right {
+      .slider-contactus,
+      .slider-href-box {
         padding: 12px 24px;
         border-radius: 200px;
         font-weight: 400;
@@ -38,32 +79,55 @@
         &:hover {
           transition-duration: 0.3s;
         }
+        @media (max-width: $sm) {
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+        }
       }
       &--left {
-        color: $grey;
-        background: $green;
-        &:hover {
-          background-color: transparent;
-          color: $green;
+        text-decoration: none;
+        .slider-contactus {
+          display: inline-block;
+          color: $grey;
+          background: $green;
+          &:hover {
+            background-color: transparent;
+            color: $green;
+          }
         }
       }
       &--right {
+        @media (max-width: $xl) {
+          margin-top: 10px;
+        }
+        @media (max-width: $md) {
+          margin: 0;
+        }
         color: $green;
         display: flex;
         gap: 10px;
-        &:hover {
-          background-color: $green;
-          color: $grey;
-          .slider-href-arrow {
-            path {
-              fill: $white;
-            }
-          }
-        }
+        text-decoration: none;
+
         .slider-href-arrow {
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+        .slider-href-box {
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          &:hover {
+            background-color: $green;
+            color: $grey;
+            .slider-href-arrow {
+              path {
+                fill: $white;
+              }
+            }
+          }
         }
       }
     }
@@ -74,6 +138,9 @@
 .offers {
   background-color: $grey;
   padding: 120px 0 160px 0;
+  @media (max-width: $lg) {
+    padding-top: 50px;
+  }
   &__header {
     color: $green;
   }
@@ -83,13 +150,21 @@
   &__under-header {
     padding: 20px 0 30px 0;
     // font-style: italic;
+    @media (max-width: $lg) {
+      font-size: 36px;
+      line-height: 120%;
+      span {
+        font-size: 36px;
+      }
+    }
   }
   .tiles {
+    justify-content: center;
     flex-wrap: wrap;
     display: flex;
     gap: 60px;
     // flex-wrap: wrap;
-    @media (max-width: $lg){
+    @media (max-width: $lg) {
       flex-direction: column;
       align-items: center;
     }
@@ -157,11 +232,15 @@
 
 // About Section
 .about {
+  overflow: hidden;
   background-color: $green;
   width: 100%;
   color: $grey;
   position: relative;
   padding: 134.5px 0;
+  @media (max-width: $lg) {
+    padding: 60px 0;
+  }
 
   .about-photo {
     top: 0;
@@ -170,23 +249,46 @@
     height: 720px;
     width: 688px;
     position: absolute;
+    @media (max-width: $xl) {
+      max-width: 580px;
+      height: 820px;
+    }
+    @media (max-width: $lg) {
+      max-width: 380px;
+      height: 660px;
+    }
+    @media (max-width: $md) {
+      display: none;
+    }
   }
 
   .about-hero {
     padding-left: 81px;
-
+    @media (max-width: $lg) {
+      padding: 0;
+    }
     &__header {
       margin: 16px 0 40px 0;
       line-height: 115%;
       max-width: 250px;
       width: 100%;
+      @media (max-width: $md) {
+        font-size: 36px;
+      }
     }
     &__textarea {
       margin-bottom: 72px;
       max-width: 500px;
       width: 100%;
+      @media (max-width: $sm) {
+        margin-bottom: 30px;
+      }
     }
     &__link {
+      @media (max-width: $sm) {
+        width: 100%;
+        text-align: center;
+      }
       display: inline-block;
       padding: 12px 24px;
       border-radius: 200px;
@@ -222,15 +324,15 @@
   position: relative;
   background-color: $beige;
   padding-top: 120px;
-.gallery-hero{
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 96px;
-  &__heading{
-    color: $green;
+  .gallery-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 96px;
+    &__heading {
+      color: $green;
+    }
   }
-}
 
   .gallery {
     padding-top: 96px;
@@ -243,7 +345,7 @@
       width: 100%;
       transition-duration: 0.3s;
       cursor: pointer;
-      &:hover{
+      &:hover {
         // width: calc(100% + 5px);
         transform: scale(1.025);
         transition-duration: 0.3s;
@@ -265,53 +367,72 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    @media (max-width: $md) {
+      bottom: 30px;
+    }
 
-    svg{
+    svg {
       transition-duration: 0.3s;
       position: relative;
       top: -1px;
     }
-    path{
+    path {
       transition-duration: 0.3s;
     }
-    &:hover{
+    &:hover {
       border-color: $grey;
       color: $grey;
-      svg{
+      svg {
         top: 1px;
         transition-duration: 0.3s;
       }
-        path{
-          fill: $grey;
-          transition-duration: 0.3s;
-        }
-
+      path {
+        fill: $grey;
+        transition-duration: 0.3s;
+      }
     }
-}
+  }
 
-.btn-primary:focus{
-  box-shadow: none !important;
-}
+  .btn-primary:focus {
+    box-shadow: none !important;
+  }
 
-.gallery-gradient {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1000px; 
-  background: linear-gradient(to top, rgba(220, 193, 171, 1), transparent);
-  pointer-events: none;
-  z-index: 998;
+  .gallery-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+    background: linear-gradient(to top, rgba(220, 193, 171, 1), transparent);
+    pointer-events: none;
+    z-index: 998;
+    @media (max-width: $lg) {
+      height: 600px;
+    }
+    @media (max-width: $sm) {
+      height: 400px;
+    }
+  }
 }
-}
-
 
 // Insta section
-.insta-box{
+.insta-box {
   padding: 60px 0;
   background-color: $grey;
   color: $grey;
-  .insta-contentbox{
+  .insta-contentbox {
+    @media (max-width: $xl) {
+      padding: 120px 30px;
+    }
+    @media (max-width: $md) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 40px 30px;
+      gap: 30px;
+    }
+    @media (max-width: $sm) {
+      gap: 30px;
+    }
     align-items: flex-end;
     padding: 120px 110px;
     display: flex;
@@ -319,15 +440,21 @@
     justify-content: center;
     align-content: center;
     gap: 65px;
-    &__info{
+    &__info {
       line-height: 120%;
       max-width: 600px;
+      @media (max-width: $xl) {
+        font-size: 30px;
+      }
+      @media (max-width: $sm) {
+        font-size: 25px;
+      }
     }
-    &__linkbox{
+    &__linkbox {
       display: flex;
       flex-direction: column;
       gap: 24px;
-      &--instabutton{
+      &--instabutton {
         display: inline-block;
         background-color: $grey;
         color: $green;
@@ -336,10 +463,14 @@
         text-decoration: none;
         border: 1px solid $grey;
         transition-duration: 0.3s;
-        &:hover{
+        &:hover {
           background-color: transparent;
           color: $grey;
           transition-duration: 0.3s;
+        }
+        @media (max-width: $sm){
+          width: 100%;
+          text-align: center;
         }
       }
     }

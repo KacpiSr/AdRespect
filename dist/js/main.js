@@ -57,7 +57,7 @@ eval("document.addEventListener('DOMContentLoaded', function() {\r\n    const ga
   \******************************************/
 /***/ (() => {
 
-eval("$(document).ready(function () {\r\n  const opinion = new Swiper(\".mySwiper\", {\r\n    speed: 800,\r\n    autoplay: {\r\n      delay: 5000,\r\n    },\r\n    loop: true,\r\n\r\n    navigation: {\r\n      nextEl: \".swiper-header .swiper-button-next\",\r\n      prevEl: \".swiper-header  .swiper-button-prev\",\r\n    },\r\n\r\n    // navigation: {\r\n    //   nextEl: \".swiper-button-next\",\r\n    //   prevEl: \".swiper-button-prev\",\r\n    // },\r\n\r\n    // pagination: {\r\n    //   el: \".swiper-pagination\",\r\n    //   type: \"fraction\",\r\n    // },\r\n  });\r\n});\n\n//# sourceURL=webpack://webpack_v5.0/./src/js/template-parts/sliders.js?");
+eval("$(document).ready(function () {\r\n  const opinion = new Swiper(\".mySwiper\", {\r\n    speed: 800,\r\n    // autoplay: {\r\n    //   delay: 5000,\r\n    // },\r\n    loop: true,\r\n\r\n    navigation: {\r\n      nextEl: \".swiper-header .swiper-button-next\",\r\n      prevEl: \".swiper-header  .swiper-button-prev\",\r\n    },\r\n\r\n    // navigation: {\r\n    //   nextEl: \".swiper-button-next\",\r\n    //   prevEl: \".swiper-button-prev\",\r\n    // },\r\n\r\n    // pagination: {\r\n    //   el: \".swiper-pagination\",\r\n    //   type: \"fraction\",\r\n    // },\r\n  });\r\n});\n\n//# sourceURL=webpack://webpack_v5.0/./src/js/template-parts/sliders.js?");
 
 /***/ })
 

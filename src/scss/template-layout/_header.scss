@@ -16,6 +16,14 @@ body.navbar-items-active {
   justify-content: center;
   align-items: center;
   // min-height: 100vh;
+  @media (max-width: $md) {
+    .container {
+      padding: 0;
+      .navbar-logo {
+        padding-left: 15px;
+      }
+    }
+  }
 }
 .container {
   max-width: 1292px;
@@ -49,7 +57,7 @@ body.navbar-items-active {
   text-decoration: none !important;
   color: $black;
   transition-duration: 0.3s;
-  &:hover{
+  &:hover {
     color: $green;
     transition-duration: 0.3s;
   }
@@ -77,7 +85,7 @@ body.navbar-items-active {
   border-bottom: 1px solid $beige;
 }
 
-input:focus-visible{
+input:focus-visible {
   outline-width: 0;
 }
 
@@ -170,14 +178,13 @@ input:focus-visible{
     width: 100%;
     transition-duration: 0.3s;
     z-index: 1;
-
   }
-  
+
   .navbar-items.active {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    background-color: $black;
+    // align-items: flex-start;
+    background-color: $white;
     position: absolute;
     top: 60px;
     left: 0;
@@ -185,24 +192,64 @@ input:focus-visible{
     z-index: 1;
     transform: translateY(0);
     height: 100vh;
+    z-index: 9999;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    gap: 10px;
+    font-size: 22px;
+    justify-content: center;
   }
 
   .navbar-items.active .offer-container.active ~ * {
     transform: translateY(180px);
   }
 
-
   .navbar-item {
     padding: 10px 20px;
     text-decoration: none;
     color: $black;
     width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
   .navbar-search {
     display: flex;
     align-items: center;
     margin-top: 20px;
+  }
+
+  .dropdown-item {
+    font-size: 18px;
+  }
+
+  .navbar-dropdown {
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: -10px;
+  }
+
+  .navbar-arrow {
+    display: none;
+  }
+
+  .navbar-search {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .search-bar{
+      order: 2;
+    }
+    .search-bar.active {
+      margin-right: 0;
+    }
+    .navbar-item{
+      padding: 0;
+      order: 1;
+    }
   }
 }
 
@@ -233,9 +280,9 @@ input:focus-visible{
   //   position: absolute;
   //   top: 50%;
   //   left: 50%;
-  transform: translate(-50%, -50%);
-  height: 20px;
-  width: 20px;
+  transform: translate(-50%, 0%);
+  height: 30px;
+  width: 30px;
 }
 
 #menu:hover {

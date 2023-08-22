@@ -22,10 +22,15 @@
                             <div class="content__hero-text f-h1 font-main--montserrat line-height-main--lh115 font-weight--fw500">Nowoczesna aranżacja Twojego ogrodu </div>
                             <p class="content__hero-under text-main font-main line-height-main">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
                             <div class="content__slider-hrefs text-main font-main ">
-                                <a class="content__slider-hrefs--left" href=""><span>Skontaktuj się z nami</span></a>
-                                <a class="content__slider-hrefs--right" href=""><span>Zobacz nasze realizacje</span> <svg class="slider-href-arrow" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z" fill="#1B5B31" />
-                                    </svg></a>
+                                <a class="content__slider-hrefs--left" href=""><span class="slider-contactus">Skontaktuj się z nami</span></a>
+                                <a class="content__slider-hrefs--right" href="">
+                                    <div class="slider-href-box">
+                                        <span>Zobacz nasze realizacje</span>
+                                        <svg class="slider-href-arrow" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z" fill="#1B5B31" />
+                                        </svg>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -38,14 +43,17 @@
                 <div class="row align-items-center">
                     <div class="col-12 col-lg-6">
                         <div class="content">
-                            <div class="content__hero-text f-h1 font-main--montserrat line-height-main--lh115 font-weight--fw500">Nowoczesna aranżacja Twojego ogrodu 2 </div>
+                            <div class="content__hero-text f-h1 font-main--montserrat line-height-main--lh115 font-weight--fw500">Nowoczesna aranżacja Twojego ogrodu2 </div>
                             <p class="content__hero-under text-main font-main line-height-main">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.2</p>
                             <div class="content__slider-hrefs text-main font-main ">
-                                <a class="content__slider-hrefs--left" href=""><span>Skontaktuj się z nami</span></a>
-                                <a class="content__slider-hrefs--right" href=""><span>Zobacz nasze realizacje</span>
-                                    <svg class="slider-href-arrow" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z" fill="#1B5B31" />
-                                    </svg>
+                                <a class="content__slider-hrefs--left" href=""><span class="slider-contactus">Skontaktuj się z nami</span></a>
+                                <a class="content__slider-hrefs--right" href="">
+                                    <div class="slider-href-box">
+                                        <span>Zobacz nasze realizacje</span>
+                                        <svg class="slider-href-arrow" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z" fill="#1B5B31" />
+                                        </svg>
+                                    </div>
                                 </a>
                             </div>
                         </div>
@@ -54,6 +62,8 @@
             </div>
         </div>
     </div>
+
+
 </section>
 
 <div class="swiper-header">
@@ -134,7 +144,7 @@
     <img class="about-photo" src="<?php echo get_template_directory_uri(); ?>/dist/img/japan.png" width="" height="" alt="slidphoto" />
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 offset-lg-6 col-lg-6">
+            <div class="col-12 offset-md-6 col-md-6 offset-lg-6 col-lg-6">
                 <div class="about-hero">
                     <div class="about-hero__heading text-main--f12">O firmie</div>
                     <div class="about-hero__header f-h2 font-main--montserrat">Tworzymy z <span class="fstyle--ita font-main">pasją</span></div>

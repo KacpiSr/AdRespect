@@ -1,9 +1,9 @@
 $(document).ready(function () {
   const opinion = new Swiper(".mySwiper", {
     speed: 800,
-    autoplay: {
-      delay: 5000,
-    },
+    // autoplay: {
+    //   delay: 5000,
+    // },
     loop: true,
 
     navigation: {
