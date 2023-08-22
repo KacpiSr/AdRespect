@@ -30,7 +30,6 @@
                                     <li class="dropdown-item font-weight--fw500">Menu strony wp 2</li>
                                     <li class="dropdown-item font-weight--fw500">Menu strony wp 3</li>
                                     <li class="dropdown-item font-weight--fw500">Menu strony wp 4</li>
-                                    <li class="dropdown-item font-weight--fw500">Menu strony wp 5</li>
                                 </ul>
                                 <div class="navbar-arrow"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/arrow.svg" width="" height="" alt="arrow" /></div>
                             </div>

@@ -2,6 +2,9 @@
     position: relative;
     background-color: $beige;
     padding-top: 120px;
+    @media (max-width: $lg){
+      padding-top: 50px;
+    }
     .gallery-hero {
       display: flex;
       flex-direction: column;
@@ -9,6 +12,9 @@
       margin-bottom: 96px;
       &__heading {
         color: $green;
+      }
+      @media (max-width: $lg){
+        margin-bottom: 45px;
       }
     }
   

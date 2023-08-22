@@ -1,4 +1,10 @@
 .insta-box {
+  @media (max-width: $sm){
+    .container{
+      padding: 0;
+      overflow: hidden;
+    }
+  }
     padding: 60px 0;
     background-color: $grey;
     color: $grey;
