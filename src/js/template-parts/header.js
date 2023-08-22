@@ -17,8 +17,10 @@ navbarBurger.addEventListener('click', () => {
   document.body.classList.toggle('navbar-items-active');
 });
 
-$(document).ready(function() {
-  $('#menu').on('click', function() {
-    $(this).toggleClass('clicked');
-  });
+const navLinks = document.querySelectorAll('.navbar a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+        navbarItems.classList.remove('active');
+        document.body.classList.remove('navbar-items-active');
+    });
 });

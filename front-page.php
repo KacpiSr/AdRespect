@@ -22,8 +22,8 @@
                             <div class="content__hero-text f-h1 font-main--montserrat line-height-main--lh115 font-weight--fw500">Nowoczesna aranżacja Twojego ogrodu </div>
                             <p class="content__hero-under text-main font-main line-height-main">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
                             <div class="content__slider-hrefs text-main font-main ">
-                                <a class="content__slider-hrefs--left" href=""><span class="slider-contactus">Skontaktuj się z nami</span></a>
-                                <a class="content__slider-hrefs--right" href="">
+                                <a href="" class="content__slider-hrefs--left" href=""><span class="slider-contactus">Skontaktuj się z nami</span></a>
+                                <a href="#gallery-scroll" class="content__slider-hrefs--right" href="">
                                     <div class="slider-href-box">
                                         <span>Zobacz nasze realizacje</span>
                                         <svg class="slider-href-arrow" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -140,7 +140,7 @@
 </section>
 
 <!-- Sekcja o firmie -->
-<section class="about">
+<section id="ofirmie-scroll" class="about">
     <img class="about-photo" src="<?php echo get_template_directory_uri(); ?>/dist/img/japan.png" width="" height="" alt="slidphoto" />
     <div class="container">
         <div class="row align-items-center">
@@ -161,7 +161,7 @@
 </section>
 
 <!-- Gallery Section -->
-<section class="gallery-section">
+<section id="gallery-scroll" class="gallery-section">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-4 offset-lg-1">

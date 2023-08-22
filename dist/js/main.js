@@ -20,6 +20,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./src/js/global/scroll-to-div.js":
+/*!****************************************!*\
+  !*** ./src/js/global/scroll-to-div.js ***!
+  \****************************************/
+/***/ (() => {
+
+eval("$('a[href*=\\\\#]:not([href=\\\\#])').click(function() {\r\n    if (location.pathname.replace(/^\\//, '') == this.pathname.replace(/^\\//, '') && location.hostname == this.hostname) {\r\n        var target = $(this.hash);\r\n        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');\r\n        if (target.length) {\r\n            $('html,body').animate({\r\n                scrollTop: target.offset().top\r\n            }, 1500);\r\n            return false;\r\n        }\r\n    }\r\n});\n\n//# sourceURL=webpack://webpack_v5.0/./src/js/global/scroll-to-div.js?");
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -27,7 +37,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _template_parts_macygallery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./template-parts/macygallery */ \"./src/js/template-parts/macygallery.js\");\n/* harmony import */ var _template_parts_macygallery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_template_parts_macygallery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/scss/main.scss\");\n/* harmony import */ var _js_template_parts_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../js/template-parts/header */ \"./src/js/template-parts/header.js\");\n/* harmony import */ var _js_template_parts_header__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_template_parts_header__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _js_template_parts_sliders__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../js/template-parts/sliders */ \"./src/js/template-parts/sliders.js\");\n/* harmony import */ var _js_template_parts_sliders__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_template_parts_sliders__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://webpack_v5.0/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _template_parts_macygallery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./template-parts/macygallery */ \"./src/js/template-parts/macygallery.js\");\n/* harmony import */ var _template_parts_macygallery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_template_parts_macygallery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/scss/main.scss\");\n/* harmony import */ var _js_template_parts_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../js/template-parts/header */ \"./src/js/template-parts/header.js\");\n/* harmony import */ var _js_template_parts_header__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_template_parts_header__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _js_template_parts_sliders__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../js/template-parts/sliders */ \"./src/js/template-parts/sliders.js\");\n/* harmony import */ var _js_template_parts_sliders__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_template_parts_sliders__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _js_global_scroll_to_div__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../js/global/scroll-to-div */ \"./src/js/global/scroll-to-div.js\");\n/* harmony import */ var _js_global_scroll_to_div__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_global_scroll_to_div__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://webpack_v5.0/./src/js/index.js?");
 
 /***/ }),
 
@@ -37,7 +47,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _tem
   \*****************************************/
 /***/ (() => {
 
-eval("const searchIcon = document.querySelector('.search-icon');\r\nconst searchBar = document.querySelector('.search-bar');\r\nconst navbarBurger = document.querySelector('.navbar-burger');\r\nconst navbarItems = document.querySelector('.navbar-items');\r\nconst ofertaContainer = document.querySelector('.offer-container');\r\n\r\nsearchIcon.addEventListener('click', () => {\r\n  searchBar.classList.toggle('active');\r\n});\r\n\r\nofertaContainer.addEventListener('click', () => {\r\n  ofertaContainer.classList.toggle('active');\r\n});\r\n\r\nnavbarBurger.addEventListener('click', () => {\r\n  navbarItems.classList.toggle('active');\r\n  document.body.classList.toggle('navbar-items-active');\r\n});\r\n\r\n$(document).ready(function() {\r\n  $('#menu').on('click', function() {\r\n    $(this).toggleClass('clicked');\r\n  });\r\n});\r\n\n\n//# sourceURL=webpack://webpack_v5.0/./src/js/template-parts/header.js?");
+eval("const searchIcon = document.querySelector('.search-icon');\r\nconst searchBar = document.querySelector('.search-bar');\r\nconst navbarBurger = document.querySelector('.navbar-burger');\r\nconst navbarItems = document.querySelector('.navbar-items');\r\nconst ofertaContainer = document.querySelector('.offer-container');\r\n\r\nsearchIcon.addEventListener('click', () => {\r\n  searchBar.classList.toggle('active');\r\n});\r\n\r\nofertaContainer.addEventListener('click', () => {\r\n  ofertaContainer.classList.toggle('active');\r\n});\r\n\r\nnavbarBurger.addEventListener('click', () => {\r\n  navbarItems.classList.toggle('active');\r\n  document.body.classList.toggle('navbar-items-active');\r\n});\r\n\r\nconst navLinks = document.querySelectorAll('.navbar a');\r\nnavLinks.forEach(link => {\r\n    link.addEventListener('click', function(event) {\r\n        navbarItems.classList.remove('active');\r\n        document.body.classList.remove('navbar-items-active');\r\n    });\r\n});\r\n\n\n//# sourceURL=webpack://webpack_v5.0/./src/js/template-parts/header.js?");
 
 /***/ }),
 

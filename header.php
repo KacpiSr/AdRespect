@@ -31,18 +31,18 @@
                         <div class="navbar-item offer-container">
                             <div class="offer-label font-weight--fw500">Oferta
                                 <ul class="navbar-dropdown">
-                                    <li class="dropdown-item font-weight--fw500">Menu strony 1</li>
-                                    <li class="dropdown-item font-weight--fw500">Menu strony 2</li>
-                                    <li class="dropdown-item font-weight--fw500">Menu strony 3</li>
-                                    <li class="dropdown-item font-weight--fw500">Menu strony 4</li>
-                                    <li class="dropdown-item font-weight--fw500">Menu strony 5</li>
+                                    <li class="dropdown-item font-weight--fw500">Menu strony wp 1</li>
+                                    <li class="dropdown-item font-weight--fw500">Menu strony wp 2</li>
+                                    <li class="dropdown-item font-weight--fw500">Menu strony wp 3</li>
+                                    <li class="dropdown-item font-weight--fw500">Menu strony wp 4</li>
+                                    <li class="dropdown-item font-weight--fw500">Menu strony wp 5</li>
                                 </ul>
                                 <div class="navbar-arrow"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/arrow.svg" width="" height="" alt="arrow" /></div>
                             </div>
                         </div>
-                        <a href="#" class="navbar-item font-weight--fw500">O firmie</a>
-                        <a href="#" class="navbar-item font-weight--fw500">Realizacje</a>
-                        <a href="#" class="navbar-item font-weight--fw500">Kontakt</a>
+                        <a href="#ofirmie-scroll" class="navbar-item font-weight--fw500">O firmie</a>
+                        <a href="#gallery-scroll" class="navbar-item font-weight--fw500">Realizacje</a>
+                        <a href="#kontakt-scroll" class="navbar-item font-weight--fw500">Kontakt</a>
                         <div class="navbar-search">
                             <input type="text" class="search-bar" placeholder="Szukaj...">
                             <div class="navbar-item"><img class="search-icon" src="<?php echo get_template_directory_uri(); ?>/dist/img/search-icon.svg" width="" height="" alt="arrow" /></div>
