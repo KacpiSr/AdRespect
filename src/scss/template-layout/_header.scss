@@ -194,7 +194,7 @@ input:focus-visible {
     // justify-content: center;
     justify-content: flex-start;
     overflow-y: auto;
-    left: 0.5s;
+    // transition: left 0.5s;
 }
 
   .navbar-items.active .offer-container.active ~ * {
